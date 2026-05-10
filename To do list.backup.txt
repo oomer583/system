@@ -1,0 +1,58 @@
+# TODO LIST
+
+## YAPILACAKLAR
+
+- [ ] Temel UI sistemi
+- [ ] Dashboard temeli
+- [ ] Firebase bağlantısı
+- [ ] Fake device mantığı
+- [ ] Dashboard sistemi yap
+- [ ] Device cards sistemi yap
+- [ ] Online/offline sistemi yap
+- [ ] Device detail sayfası yap
+- [ ] Fake device sistemi yap
+- [ ] Realtime device sistemi yap
+- [ ] Firestore device koleksiyonu oluştur
+- [ ] SecurityLogs koleksiyonu oluştur
+- [ ] ConnectionRequests koleksiyonu oluştur
+- [ ] Agent register sistemi yap
+- [ ] Device heartbeat sistemi yap
+- [ ] LastSeen sistemi yap
+- [ ] Connection request sistemi yap
+- [ ] Accept/reject sistemi yap
+- [ ] Request popup sistemi yap
+- [ ] Active session sistemi yap
+- [ ] Disconnect sistemi yap
+- [ ] Security logs sistemi yap
+- [ ] Trusted devices sistemi yap
+- [ ] Session sistemi yap
+- [ ] Token sistemi yap
+- [ ] Realtime updates sistemi yap
+- [ ] Android agent sistemi yap
+- [ ] Android register sistemi yap
+- [ ] WebSocket bağlantısı yap
+- [ ] MediaProjection sistemi yap
+- [ ] Accessibility sistemi yap
+- [ ] Screen streaming sistemi yap
+- [ ] Touch injection sistemi yap
+- [ ] Keyboard forwarding sistemi yap
+- [ ] Clipboard sistemi yap
+- [ ] File transfer sistemi yap
+- [ ] Remote control sistemi yap
+- [ ] scrcpy entegrasyonu araştır
+- [ ] Optimization sistemi yap
+- [ ] Adaptive bitrate sistemi yap
+- [ ] Compression sistemi yap
+- [ ] Active connection bildirimi yap
+- [ ] Disconnect notification sistemi yap
+- [ ] Login sistemi yap
+- [ ] Authentication sistemi yap
+- [ ] User settings sistemi yap
+- [ ] Logs paneli yap
+- [ ] Device management sistemi yap
+- [ ] Admin sistemi yap
+- [ ] Android APK sistemi yap
+- [ ] Release sistemi yap
+
+## YAPILANLAR
+

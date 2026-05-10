@@ -1,0 +1,313 @@
+.file-transfer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.file-transfer-modal {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.transfer-header {
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.transfer-header h2 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.transfer-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #999;
+}
+
+.transfer-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+  padding: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+  color: #667eea;
+}
+
+.tab-btn.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.transfer-content {
+  padding: 25px;
+}
+
+.drop-zone {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.drop-zone:hover {
+  border-color: #667eea;
+  background: #f5f8ff;
+}
+
+.drop-zone.dragover {
+  border-color: #667eea;
+  background: #f5f8ff;
+  transform: scale(1.02);
+}
+
+.drop-content {
+  pointer-events: none;
+}
+
+.drop-icon {
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
+
+.drop-text {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.drop-subtext {
+  margin: 0 0 15px 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.btn-select-files {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  pointer-events: auto;
+}
+
+.btn-select-files:hover {
+  background: #764ba2;
+  transform: translateY(-2px);
+}
+
+.file-list {
+  margin-top: 30px;
+}
+
+.file-list h3 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.file-item {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.file-item:hover {
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.file-item.completed {
+  border-left: 4px solid #28a745;
+}
+
+.file-item.failed {
+  border-left: 4px solid #dc3545;
+}
+
+.file-icon {
+  font-size: 24px;
+  text-align: center;
+}
+
+.file-info {
+  min-width: 0;
+}
+
+.file-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-size {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.file-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: #999;
+  min-width: 35px;
+  text-align: right;
+}
+
+.status-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.btn-remove {
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #999;
+  transition: all 0.3s;
+}
+
+.btn-remove:hover {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.receive-section {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+}
+
+.empty-state p {
+  margin: 10px 0;
+}
+
+.empty-state .info {
+  font-size: 12px;
+  color: #bbb;
+}
+
+@media (max-width: 600px) {
+  .file-item {
+    grid-template-columns: 1fr;
+  }
+
+  .file-progress {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .file-progress .progress-bar {
+    flex: 1;
+  }
+}

@@ -1,0 +1,115 @@
+.trusted-devices {
+  width: 100%;
+}
+
+.section-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.section-header h2 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.section-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.devices-table {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  background: #f5f5f5;
+  font-weight: 600;
+  font-size: 13px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.table-row:hover {
+  background: #f9f9f9;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.col-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.device-icon {
+  font-size: 18px;
+}
+
+.col-date, .col-used {
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-remove {
+  padding: 6px 12px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-remove:hover {
+  background: #ff3838;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .table-header, .table-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .table-header {
+    display: none;
+  }
+
+  .table-row {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .col-name::before { content: 'Cihaz: '; font-weight: 600; }
+  .col-date::before { content: 'Ekleme: '; font-weight: 600; }
+  .col-used::before { content: 'Son Kullanım: '; font-weight: 600; }
+}
